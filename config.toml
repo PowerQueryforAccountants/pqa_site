@@ -13,4 +13,4 @@ theme = "hugo-theme-hamburg"
         url = "pages/about"
 
 [params]
-    subtitle = "The great example site of the hugo-hamburg-theme"
+    subtitle = "Be an awesome accountant"
