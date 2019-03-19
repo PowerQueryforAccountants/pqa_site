@@ -1,3 +1,16 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "/"
+# If you use "hugo server" you might want to use this entry:
+# baseurl = "http://localhost:1313/"
+title = "Power Query for Accountants"
+copyright = "&copy; Power Query for Accountants 2019"
+
+theme = "hamburg"
+
+[menu]
+    [[menu.main]]
+        name = "About"
+        identifier = "about"
+        url = "pages/about"
+
+[params]
+    subtitle = "The great example site of the hugo-hamburg-theme"
