@@ -1,3 +1,6 @@
 [submodule "themes/hugo-theme-hamburg"]
 	path = themes/hugo-theme-hamburg
 	url = https://github.com/hauke96/hugo-theme-hamburg.git
+[submodule "themes/jeffprod"]
+	path = themes/jeffprod
+	url = https://github.com/Tazeg/hugo-blog-jeffprod.git

@@ -3,14 +3,9 @@ baseurl = "/"
 # baseurl = "http://localhost:1313/"
 title = "Power Query for Accountants"
 copyright = "&copy; Power Query for Accountants 2019"
+canonifyurls = true
+paginate = 3
 
-theme = "hugo-theme-hamburg"
+theme = "jeffprod"
 
-[menu]
-    [[menu.main]]
-        name = "About"
-        identifier = "about"
-        url = "pages/about"
-
-[params]
-    subtitle = "Be an awesome accountant"
+disableKinds = ["taxonomy", "taxonomyTerm"]
