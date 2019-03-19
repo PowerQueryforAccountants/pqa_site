@@ -4,7 +4,7 @@ baseurl = "/"
 title = "Power Query for Accountants"
 copyright = "&copy; Power Query for Accountants 2019"
 
-theme = "hamburg"
+theme = "hugo-theme-hamburg"
 
 [menu]
     [[menu.main]]
