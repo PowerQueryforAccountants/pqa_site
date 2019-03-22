@@ -1,5 +1,5 @@
 ---
-title: "Extracting a Trial Balance from a Ledger - Part 1"
+title: "Extracting a Trial Balance from a Ledger - Part 2"
 date: 2019-03-19T20:49:53+08:00
 draft: false
 classes:

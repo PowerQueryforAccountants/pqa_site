@@ -2,10 +2,45 @@ baseurl = "/"
 # If you use "hugo server" you might want to use this entry:
 # baseurl = "http://localhost:1313/"
 title = "Power Query for Accountants"
-copyright = "&copy; Power Query for Accountants 2019"
-canonifyurls = true
-paginate = 3
+copyright = "© 2019 Power Query for Accountants"
+#canonifyurls = true
+#paginate = 3
+#theme = "jeffprod"
+#disableKinds = ["taxonomy", "taxonomyTerm"]
 
-theme = "jeffprod"
+paginate = 5
+buildFuture = true
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+theme = "story"
+
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/xaprb/story/"
+
+[[menu.main]]
+  name = "Talks"
+  title = "Talks"
+  url = "/talks/"
+
+[[menu.main]]
+  name = "Slides"
+  title = "Slides"
+  url = "/slides/"
+
+[[menu.main]]
+  name = "Archives"
+  title = "Archives"
+  url = "/archives/"
+
+[params]
+  author = "Baron Schwartz"
+  twitter = "xaprb"
+  classes = []
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
