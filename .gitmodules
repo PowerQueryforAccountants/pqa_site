@@ -13,3 +13,6 @@
 [submodule "themes/story"]
 	path = themes/story
 	url = https://github.com/xaprb/story.git
+[submodule "themes/wave"]
+	path = themes/wave
+	url = https://gitlab.com/syui/hugo-theme-wave.git
