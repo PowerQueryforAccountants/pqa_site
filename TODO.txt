@@ -1,0 +1,2 @@
+color the navigation pages
+fix tag linking and archive linking - do the pushing in mac

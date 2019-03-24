@@ -1,15 +1,18 @@
 ---
 title: "Extracting a Trial Balance from a Ledger - Part 1"
+linktitle: "Extracting a Trial Balance from a Ledger - Part 1"
 date: 2019-03-19T20:49:53+08:00
 draft: false
 tags: [
-    "power query",
+    "groupby",
     "ledger",
-    "trial balance"
+    "trial.balance"
 ]
+archives: ["2019"]
+next: /post/extracting_trial_balance_from_ledger_p2/
 ---
 
-## Extracting a Trial Balance from a Ledger - Part 1
+### Extracting a Trial Balance from a Ledger - Part 1
 <br>
 There are times when a client gives an Excel file containing all the transactions for all of its accounts and our task is to extract the trial balance from it.
 
@@ -21,7 +24,7 @@ We might do this as means to following:
 
 In that case, Power Query could help up us do this.
 
-### Let's review our data
+#### Let's review our data
 For this article, we're going to use a file provided by the client. Download the file [gl_file.xlsx](https://github.com/kennethjhim/Power-Query-for-Accountants/tree/master/Ledger%20to%20Trial%20Balance) here.
 
 * It contains data from the April 1, 2017 to March 31, 2018 for a fictitious company Acme Corporation. 
@@ -35,7 +38,7 @@ Adding formulas in this workbook to clean the data might work but will be cumber
 
 Fortunately, we have Power Query in order to clean this file.
 
-### What is required?
+#### What is required?
 Basically, when cleaning up data like this, we should strive to convert our data into a table. In other words,
 
 * There should be no blank rows, and blank columns
@@ -44,7 +47,7 @@ Basically, when cleaning up data like this, we should strive to convert our data
 After converting it to a table, then that's the time that we can extract the trial balance from it.
 Let's jump on to Power Query do our first pass of cleanup.
 
-### Loading our data in Power Query
+#### Loading our data in Power Query
 * Create a new Excel file in the same directory where you put the raw file. Let's name this `extracted_tb.xlsx`
     
     ![New Excel File](/img/extracting_trial_balance_from_ledger/new_excel_file.png)
@@ -59,14 +62,14 @@ Let's jump on to Power Query do our first pass of cleanup.
 
     ![Sheet Loaded](/img/extracting_trial_balance_from_ledger/sheet_loaded.png)
 
-### Removing the empty rows
+#### Removing the empty rows
 The easiest that we could do in any data cleanup is to remove blank rows and columns. They are easy to implement and guaranteed to make your data much suitable for analysis.
 
 We could remove empty rows by going to Home > Remove Rows > Remove Blank Rows.
 
 ![Remove Empty Rows](/img/extracting_trial_balance_from_ledger/remove_empty_rows.png)
 
-### Removing empty columns
+#### Removing empty columns
 The next we could do is remove blank columns. Power Query does not have a built in option to remove empty or blank columns. It has built-in for removing empty rows though. 
 
 Other Power Query users are transposing the data so that columns would turn into rows, apply the Remove Blank Rows, then transpose the data to convert it back to the original layout. 
@@ -115,7 +118,7 @@ in
 
 * Close the PQ editor. When prompted to Load results, choose **Only Create Connection**
 
-### Conclusion
+#### Conclusion
 That's it for now. In the next tutorial, we're going to remove section headers and further remove blank cells until we're down to our general ledger table. Click on this link to view [Part 2](ledger_to_trial_balance_part_2.html) of this tutorial.
 
 **Stay Querious. Happy coding!**

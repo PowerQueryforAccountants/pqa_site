@@ -1,118 +1,78 @@
 ---
 title: "Extracting a Trial Balance from a Ledger - Part 2"
+linktitle: "Extracting a Trial Balance from a Ledger - Part 2"
 date: 2019-03-19T20:49:53+08:00
 draft: false
-classes:
-- feature-nohdr
+tags: [
+    "groupby",
+    "ledger",
+    "trial.balance"
+]
+archives: ["2019"]
+prev: /post/extracting_trial_balance_from_ledger_p1/
+next: /post/extracting_trial_balance_from_ledger_p3/
+
 ---
 
-## Extracting a Trial Balance from a Ledger - Part 1
+### Extracting a Trial Balance from a Ledger - Part 2
+
 <br>
-There are times when a client gives an Excel file containing all the transactions for all of its accounts and our task is to extract the trial balance from it.
+This is the Part 2 on Extracting a Trial Balance from an Accounting Ledger using Power Query.
+If you missed the Part 1, you can read it [here](/post/extracting_trial_balance_from_ledger_p1/)
 
-We might do this as means to following:
+#### Removing Section Headers
+At this point, all of the empty rows and empty columns from our general ledger have been remove. The next to do is remove the section headers.
 
-* Import the trial balance into another software. Perhaps transition to cloud accounting software from a legacy software
-* Create the customized financial statements out of the trial balance.
-* For audit or due diligence procedures.
+Open up PQ editor by going to Data > Show Queries. Then click on our query (mine is named "Sheet1").
 
-In that case, Power Query could help up us do this.
+As you can see, our first column contains only the section headers. In our original Excel file, these are the merge cells. When they were imported, merging has removed and remain in the first column. To remove them, we simply filter the first column to include only null values.
 
-### Let's review our data
-For this article, we're going to use a file provided by the client. Download the file [gl_file.xlsx](https://github.com/kennethjhim/Power-Query-for-Accountants/tree/master/Ledger%20to%20Trial%20Balance) here.
+![Remove Section Headers](/img/extracting_trial_balance_from_ledger/remove_section_headers.png)
 
-* It contains data from the April 1, 2017 to March 31, 2018 for a fictitious company Acme Corporation. 
-* The file is divided into sections where each sections contain the transactions for a particular account. 
-* The transactions are arrange by date. For example, in row 29 the balance is 67965.95 which can be derived by adding the 198.35 to the previous balance, 67767.60, in row 28.
-* It also contains almost 40,000 rows of data. 
-* There are blank rows between each value (they have shorter height).
-* Lastly, the file is almost 3MB in size.
+#### Removing Report Metadata
 
-Adding formulas in this workbook to clean the data might work but will be cumbersome due to the layout of the data. In addition, formulas will add to the file size making it prone to crashing.
+The next we're going to do is to remove the report metadata. These are actually not the data itself, but rather data that describes our data. These includes the page number, the date when the data is printed, and so on. 
 
-Fortunately, we have Power Query in order to clean this file.
+We could remove these by filtering them out from the 3rd column. Take note that we're not going to remove the GL ID as we're going to need them later on.
 
-### What is required?
-Basically, when cleaning up data like this, we should strive to convert our data into a table. In other words,
+![Remove Report Metadata](/img/extracting_trial_balance_from_ledger/remove_report_metadata.png)
 
-* There should be no blank rows, and blank columns
-* There should be no unnecessary headers like section headers. There should be only one set of column headers.
+#### Removing Column Headers
+Our data is beginning to take our desired format. However, it still has duplicate column headers. We have to promote the first row to column headers then remove the duplicates. 
 
-After converting it to a table, then that's the time that we can extract the trial balance from it.
-Let's jump on to Power Query do our first pass of cleanup.
+To promot headers, go to Home > Use First Row as Headers
 
-### Loading our data in Power Query
-* Create a new Excel file in the same directory where you put the raw file. Let's name this `extracted_tb.xlsx`
-    
-    ![New Excel File](/img/extracting_trial_balance_from_ledger/new_excel_file.png)
+![First Row as Headers](/img/extracting_trial_balance_from_ledger/first_row_as_headers.png)
 
-* Open `extracted_tb.xlsx` and go to Data > New Query > From Workbook.
-* In the dialog box that appears, choose `gl_file.xlsx`
-* Choose Sheet1 from the Wizard and click on Edit.
-    
-    ![Edit Sheet 1](/img/extracting_trial_balance_from_ledger/edit_sheet1.png)
+Then, we remove the duplicate column headers. Filter out the word "Date" from the second column (which is now named `Date` cause we've just promoted the first row as headers)
 
-* The data now loads in the Power Query ("PQ") editor.
+![Remove duplicate col headers](/img/extracting_trial_balance_from_ledger/remove_dupl_col_headers.png)
 
-    ![Sheet Loaded](/img/extracting_trial_balance_from_ledger/sheet_loaded.png)
+#### Adding Accounts Column
+We now create a new column that will contain both the Account Numbers and Account Name. We're going to use this column later on but we're going to add this now to further clean up our data.
 
-### Removing the empty rows
-The easiest that we could do in any data cleanup is to remove blank rows and columns. They are easy to implement and guaranteed to make your data much suitable for analysis.
+There are two ways to do this:
+1. Add a custom column 
+2. Merge the columns
 
-We could remove empty rows by going to Home > Remove Rows > Remove Blank Rows.
+Let's go with the merge option as it has the side effect of removing the old columns. Select the two columns to be combined and right-click Merge Columns. Name this new column as `Account`.
 
-![Remove Empty Rows](/img/extracting_trial_balance_from_ledger/remove_empty_rows.png)
+![Merge Col](/img/extracting_trial_balance_from_ledger/merged_column.png)
 
-### Removing empty columns
-The next we could do is remove blank columns. Power Query does not have a built in option to remove empty or blank columns. It has built-in for removing empty rows though. 
+Move this new column at the start of our table by dragging the header at the start.
 
-Other Power Query users are transposing the data so that columns would turn into rows, apply the Remove Blank Rows, then transpose the data to convert it back to the original layout. 
+#### Removing Unnecessary Columns
+Due to transformations we've made, some columns now contain null data, while some contains just labels. We need to remove these columns. In our table, select `Column1`, `Column3`, `Column5` & `Column8`. Note that these are the columns that don't have the headers that we promoted. Also select `Debit`, `Credit`, and `Balance` columns. These columns have headings but the values are in the adjacent columns. Right-click then `Remove Columns`
 
-Personally, I don't like this workaround as it is not feasible for very large datasets (Power Query will crash). I would prefer to use a custom function to remove empty columns. Fortunately, we have just that function below
+![Remove Columns](/img/extracting_trial_balance_from_ledger/remove_columns.png)
 
-```
-(tbl) =>
-let
-    Headers = Table.ColumnNames(tbl),
 
-    Result = Table.SelectColumns(
-                 tbl,
-                 List.Select(Headers, each List.MatchesAny(Table.Column(tbl, _), each _ <> null)))
-in
-    Result
-```
+Let's rename also our columns to further tidy this up. Rename the last four columns as `Description`, `Debit`, `Credit`, `Balance`. Our data should now look like this:
 
-**To remove empty columns**
+![Part 2 End](/img/extracting_trial_balance_from_ledger/part2_end.png)
 
-* In the Queries Pane of PQ editor, right-click on the queries editor and choose New Query > Other Query > Blank Query.
-    
-    ![New Blank Query](/img/extracting_trial_balance_from_ledger/blank_query.png)
 
-* Copy the code above to this query using the Advanced Editor in the Home Tab
-
-    ![Copy to Editor](/img/extracting_trial_balance_from_ledger/copy_editor.png)
-
-* Rename this query to fnRemoveEmptyColumns. Take note that this query is denoted by the fx symbol
-    
-    ![fx](/img/extracting_trial_balance_from_ledger/fx_symbol.png)
-
-  as this is a function.
-    
-* Go back to the original query. In the formula bar, click on the `fx` symbol
-
-    ![fx Button](/img/extracting_trial_balance_from_ledger/fx_button.png)
-
-  to invoke a function. 
-
-* Type in `fnRemoveEmptyColumns(#"Removed Top Rows")` and Enter
-
-    ![Invoke Function](/img/extracting_trial_balance_from_ledger/invoke_function.PNG)
-
-  Empty columns are now removed.
-
-* Close the PQ editor. When prompted to Load results, choose **Only Create Connection**
-
-### Conclusion
-That's it for now. In the next tutorial, we're going to remove section headers and further remove blank cells until we're down to our general ledger table. Click on this link to view [Part 2](ledger_to_trial_balance_part_2.html) of this tutorial.
+#### Conclusion
+That's it for now. In the next and last part of this series, we're going to fill missing data from our table then extract the trial balance. Click on this link to view [Part 3](ledger_to_trial_balance_part_3.html) of this tutorial.
 
 **Stay Querious. Happy coding!**

@@ -6,4 +6,13 @@ copyright = "© 2019 Power Query for Accountants"
 canonifyurls = true
 paginate = 3
 theme = "jeffprod"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+#disableKinds = ["taxonomy", "taxonomyTerm"]
+
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  archive = "archives"
+
+
+preserveTaxonomyNames = true
