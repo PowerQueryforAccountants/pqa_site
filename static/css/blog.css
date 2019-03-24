@@ -4,20 +4,30 @@
   		url('aileron-heavy-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Aileron-Regular';
+  src: 	url('aileron-Regular-webfont.woff2') format('woff2'),
+  		url('aileron-Regular-webfont.woff') format('woff');
+}
+
 html,body {
-    font-family: 'Aileron Regular', sans-serif;
+    font-family: 'Aileron-Regular', sans-serif;
     background: #F0F2F4;
     /*background: #FFFFFF;*/
     }
+
 .hero-body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     }
+
 .mysocial { color: hsl(0, 0%, 100%);}
 .mysocial:hover { color: #6CE2E5 }
 
-
+.navbar-brand > .navbar-item.logo {
+	padding-right: 0px;
+}
 .navbar-brand > .navbar-item.title.is-4,  .navbar-menu > .navbar-end > .navbar-item {
 	font-family: 'Aileron-Heavy', sans-serif;
 	color: #1C3F40;
