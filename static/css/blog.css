@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Aileron-Heavy';
+  src: 	url('aileron-heavy-webfont.woff2') format('woff2'),
+  		url('aileron-heavy-webfont.woff') format('woff');
+}
+
+html,body {
+    font-family: 'Aileron Regular', sans-serif;
+    background: #F0F2F4;
+    /*background: #FFFFFF;*/
+    }
+.hero-body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+.mysocial { color: hsl(0, 0%, 100%);}
+.mysocial:hover { color: #6CE2E5 }
+
+
+.navbar-brand > .navbar-item.title.is-4,  .navbar-menu > .navbar-end > .navbar-item {
+	font-family: 'Aileron-Heavy', sans-serif;
+	color: #1C3F40;
+}
+
+.navbar-brand > .navbar-item.title.is-4:hover,  .navbar-menu > .navbar-end > .navbar-item:hover {
+	color: ;
+	/*color: #387E7F;*/
+	color: #6CE2E5;
+}
+
+/******** CARDS *********/
+.title.is-5 {
+	font-family: 'Aileron-Heavy', sans-serif;
+}
+
+/*tags*/
+span.tag {
+	background-color: #6CE4E5
+}
+
+.tag > a {
+	color: #1C3F40;
+	/*color: #6CE4E5;*/
+	/*color: #387E7F;*/
+}
+
+.tag > a:hover {
+	/*color: #54BCBF;*/
+	color: #5ABCBF;
+}
+
+/*recent post and archives*/
+.card-content > a, .card-content > h1 > a {
+	color: #1C3F40;
+}
+
+.card-content > a:hover, .card-content > h1 > a:hover {
+	/*color: #387E7F;*/
+	color: #6CE2E5;
+}
+
+/******** POSTS *********/
+
+/*post titles index pag*/
+.title.is-4 > a {
+	color: #1C3F40;
+	font-family: 'Aileron-Heavy', sans-serif;
+}
+
+.title.is-4 > a:hover {
+	color: #6CE2E5;
+}
+
+/*links within the article*/
+.content > p > a {
+	color: #54BCBF;
+	/*color: #6CE4E5;*/
+	/*color: #387E7F;*/
+}
+
+.content > p > a:hover {
+	/*color: #54BCBF;*/
+	color: #1C3F40;
+}
+
+/*sections within a post*/
+.content > h2, .content > h3, .content > h1, .content > h4, .content > h5 {
+	font-family: 'Aileron-Heavy', sans-serif;
+}
+

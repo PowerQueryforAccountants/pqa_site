@@ -2,8 +2,11 @@
 title: "Extracting a Trial Balance from a Ledger - Part 1"
 date: 2019-03-19T20:49:53+08:00
 draft: false
-classes:
-- feature-nohdr
+tags: [
+    "power query",
+    "ledger",
+    "trial balance"
+]
 ---
 
 ## Extracting a Trial Balance from a Ledger - Part 1
