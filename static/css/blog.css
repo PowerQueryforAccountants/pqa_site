@@ -28,6 +28,13 @@ html,body {
 .navbar-brand > .navbar-item.logo {
 	padding-right: 0px;
 }
+
+/*inline svg is needed*/
+/*.navbar-brand > .navbar-item.logo:hover {
+  fill: rgba(108, 226, 229, 70%);
+  fill: brightness(1.2);
+}*/
+
 .navbar-brand > .navbar-item.title.is-4,  .navbar-menu > .navbar-end > .navbar-item {
 	font-family: 'Aileron-Heavy', sans-serif;
 	color: #1C3F40;
@@ -62,12 +69,14 @@ span.tag {
 
 /*recent post and archives*/
 .card-content > a, .card-content > h1 > a {
+	/*color: rgba(60, 126, 127, 80%);*/
 	color: #1C3F40;
 }
 
 .card-content > a:hover, .card-content > h1 > a:hover {
 	/*color: #387E7F;*/
 	color: #6CE2E5;
+	/*color: #1C3F40;*/
 }
 
 /******** POSTS *********/
