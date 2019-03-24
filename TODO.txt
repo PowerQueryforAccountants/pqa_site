@@ -1,2 +1,49 @@
 color the navigation pages
 fix tag linking and archive linking - do the pushing in mac
+
+
+Calendar:
+2019-01-5
+Extracting Trial Balance From Ledger P1
+
+2019-01-12
+Extracting Trial Balance From Ledger P2
+
+2019-01-19
+Extracting Trial Balance From Ledger P3
+
+2019-01-26
+
+2019-02-02
+Getting Ending Inventory Under FIFO
+
+2019-02-09
+Getting FIFO Inventory Cost
+
+2019-02-16
+
+2019-02-23
+Detecting Unrecorded Sales
+
+
+2019-03-02
+
+2019-03-09
+Cleaning Contacts List for Import to Xero
+
+2019-03-16
+
+2019-03-23
+Summarizing Time Logs for Payroll
+
+2019-03-30
+
+2019-04-06
+Automating Transaction Import from Sales Journal
+
+2019-04-13
+
+2019-04-20
+Automating Sales Analysis
+
+2019-04-27

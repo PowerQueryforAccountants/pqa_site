@@ -1,7 +1,7 @@
 ---
 title: "Extracting a Trial Balance from a Ledger - Part 3"
 linktitle: "Extracting a Trial Balance from a Ledger - Part 3"
-date: 2019-03-19T20:49:53+08:00
+date: 2019-01-19
 draft: false
 tags: [
     "groupby",

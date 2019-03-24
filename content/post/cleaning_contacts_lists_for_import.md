@@ -1,7 +1,7 @@
 ---
 title: "Cleaning Contacts List for Import to Xero"
 linktitle: "Cleaning Contacts List for Import to Xero"
-date: 2019-03-19T20:49:53+08:00
+date: 2019-03-09
 draft: true
 tags: [
     "List.Accumulate",
