@@ -7,7 +7,7 @@ tags: [
     "List.Accumulate",
     "groupby",
     "merge",
-    "join",
+    "join"
 ]
 
 archives: ["2019"]

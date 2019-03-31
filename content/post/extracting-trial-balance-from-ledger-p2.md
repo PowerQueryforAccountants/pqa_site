@@ -6,7 +6,7 @@ draft: false
 tags: [
     "groupby",
     "ledger",
-    "trial balance"
+    "trial.balance"
 ]
 archives: ["2019"]
 prev: /post/extracting_trial_balance_from_ledger_p1/

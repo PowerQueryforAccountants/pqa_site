@@ -4,10 +4,10 @@ linktitle: "Detecting Unrecorded Sales"
 date: 2019-02-23
 draft: true
 tags: [
-    "unrecorded sales",
-    "fictitious sales",
+    "unrecorded.sales",
+    "fictitious.sales",
     "merge",
-    "join",
+    "join"
 ]
 archives: ["2019"]
 ---

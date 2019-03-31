@@ -6,7 +6,9 @@ copyright = "© 2019 Power Query for Accountants"
 canonifyurls = true
 paginate = 3
 theme = "jeffprod"
-
+#uglyurls = false
+#[permalinks]
+#    tag = "tags/:tag/"
 
 [taxonomies]
   tag = "tags"

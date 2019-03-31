@@ -4,7 +4,9 @@
         <div class="tags">
 
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-            <span class="tag"><a href="{{ "tags" | absURL }}/{{ $name | urlize | lower }}">{{ $name | humanize }}</a></span>
+            <!-- {{ printf $name }} -->
+            <span class="tag"><a href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ replace $name "." " " | humanize }}</a></span>
+            <!-- <span class="tag"><a href="{{ "tags" | absURL }}/{{ $name | urlize | lower }}">{{ $name }}</a></span> -->
         {{ end }}
         </div>          
     </div>
