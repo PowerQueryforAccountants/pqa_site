@@ -5,8 +5,8 @@ date: 2019-03-23
 draft: true
 tags: [
     "groupby",
-    "fifo.costing",
-    "custom.functions"
+    "fifo costing",
+    "time sheets"
 ]
 ---
 archives: ["2019"]

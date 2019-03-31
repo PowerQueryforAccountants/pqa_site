@@ -108,3 +108,25 @@ span.tag {
 	font-family: 'Aileron-Heavy', sans-serif;
 }
 
+
+.pagination-link.is-current {
+    background-color: #57c4c7;
+    border-color: #57c4c7;
+    color: #fff;
+}
+
+.pagination-link:hover {
+    border-color: #54BCBF;
+}
+
+.pagination-link:active {
+    border-color: #1C3F40;
+}
+
+.pagination.is-rounded .pagination-next:hover, .pagination.is-rounded .pagination-previous:hover {
+    border-color: #54BCBF;
+}
+
+.pagination.is-rounded .pagination-next:active, .pagination.is-rounded .pagination-previous:active {
+    border-color: #1C3F40;
+}
