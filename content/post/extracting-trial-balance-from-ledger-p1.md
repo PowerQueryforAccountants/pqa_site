@@ -10,70 +10,69 @@ tags: [
 ]
 
 archives: ["2019"]
-next: /post/extracting_trial_balance_from_ledger_p2/
+next: /post/extracting-trial-balance-from-ledger-p2/
 ---
 
-### Extracting a Trial Balance from a Ledger - Part 1
+## Extracting a Trial Balance from a Ledger - Part 1
 <br>
 There are times when a client gives an Excel file containing all the transactions for all of its accounts and our task is to extract the trial balance from it.
 
-We might do this as means to following:
+We might do this to:
 
-* Import the trial balance into another software. Perhaps transition to cloud accounting software from a legacy software
+* Import the trial balance into another software. Perhaps transition to cloud accounting software from a legacy desktop software.
 * Create the customized financial statements out of the trial balance.
 * For audit or due diligence procedures.
 
 In that case, Power Query could help up us do this.
 
-#### Let's review our data
-For this article, we're going to use a file provided by the client. Download the file [gl_file.xlsx](https://github.com/kennethjhim/Power-Query-for-Accountants/tree/master/Ledger%20to%20Trial%20Balance) here.
+### Let's review our data
+For this article, we're going to use a sample ledger file in Excel. You can download the file **[gl_file.xlsx](https://github.com/PowerQueryforAccountants/Extracting-Trial-Balance-from-a-Ledger)** here. 
+
+Some overview of the data that we have:
 
 * It contains data from the April 1, 2017 to March 31, 2018 for a fictitious company Acme Corporation. 
-* The file is divided into sections where each sections contain the transactions for a particular account. 
-* The transactions are arrange by date. For example, in row 29 the balance is 67965.95 which can be derived by adding the 198.35 to the previous balance, 67767.60, in row 28.
+* The transactions are arrange by date and grouped by Account. For example, in row 29 the balance is 67965.95 which can be derived by adding the 198.35 to the previous balance, 67767.60, in row 28.
 * It also contains almost 40,000 rows of data. 
-* There are blank rows between each value (they have shorter height).
+* There are blank rows between each transaction row (they have shorter height).
 * Lastly, the file is almost 3MB in size.
 
 Adding formulas in this workbook to clean the data might work but will be cumbersome due to the layout of the data. In addition, formulas will add to the file size making it prone to crashing.
 
 Fortunately, we have Power Query in order to clean this file.
 
-#### What is required?
-Basically, when cleaning up data like this, we should strive to convert our data into a table. In other words,
+### What is required?
+Basically, when cleaning up data like this, we should strive to convert our data into a table format. In other words,
 
-* There should be no blank rows, and blank columns
-* There should be no unnecessary headers like section headers. There should be only one set of column headers.
+* There should be no blank rows, and blank columns.
+* There should be no unnecessary headers like section headers. There should be only one set of headers which serves as column names.
 
 After converting it to a table, then that's the time that we can extract the trial balance from it.
 Let's jump on to Power Query do our first pass of cleanup.
 
-#### Loading our data in Power Query
-* Create a new Excel file in the same directory where you put the raw file. Let's name this `extracted_tb.xlsx`
+### Loading our data in Power Query
+* Create a new Excel file in the same directory where you put the raw file. Let's name this **extracted_tb.xlsx**
+* Open **extracted_tb.xlsx** and create a new query from Workbook. Choose **gl_file.xlsx**.
+
+    ![New Excel File](/img/extracting-trial-balance-from-ledger-p1/new_query.png)
+    <br/>
+    <br/>
+* Choose **Sheet1** and click on **Edit**.
     
-    ![New Excel File](/img/extracting_trial_balance_from_ledger/new_excel_file.png)
+    ![Edit Sheet 1](/img/extracting-trial-balance-from-ledger-p1/edit_sheet1.png)
+    <br/>
 
-* Open `extracted_tb.xlsx` and go to Data > New Query > From Workbook.
-* In the dialog box that appears, choose `gl_file.xlsx`
-* Choose Sheet1 from the Wizard and click on Edit.
-    
-    ![Edit Sheet 1](/img/extracting_trial_balance_from_ledger/edit_sheet1.png)
+### Removing the empty rows and columns
+The easiest that we could do in any data cleanup is to remove blank rows and columns.
 
-* The data now loads in the Power Query ("PQ") editor.
+To remove empty rows, go to **Home > Remove Rows > Remove Blank Rows**.
 
-    ![Sheet Loaded](/img/extracting_trial_balance_from_ledger/sheet_loaded.png)
+![Remove Empty Rows](/img/extracting-trial-balance-from-ledger-p1/remove_empty_rows.png)
+<br/>
+<br/>
 
-#### Removing the empty rows
-The easiest that we could do in any data cleanup is to remove blank rows and columns. They are easy to implement and guaranteed to make your data much suitable for analysis.
+The next we could do is remove blank columns. Power Query does not have a built in option to remove empty or blank columns. This is kinda annoying and I don't know why this is the case.
 
-We could remove empty rows by going to Home > Remove Rows > Remove Blank Rows.
-
-![Remove Empty Rows](/img/extracting_trial_balance_from_ledger/remove_empty_rows.png)
-
-#### Removing empty columns
-The next we could do is remove blank columns. Power Query does not have a built in option to remove empty or blank columns. It has built-in for removing empty rows though. 
-
-Other Power Query users are transposing the data so that columns would turn into rows, apply the Remove Blank Rows, then transpose the data to convert it back to the original layout. 
+Other Power Query users are transposing the data to turn columns into rows, so that they could apply Remove Blank Rows, then transpose the data back to its original layout. 
 
 Personally, I don't like this workaround as it is not feasible for very large datasets (Power Query will crash). I would prefer to use a custom function to remove empty columns. Fortunately, we have just that function below
 
@@ -88,38 +87,47 @@ let
 in
     Result
 ```
+<br>
 
-**To remove empty columns**
-
-* In the Queries Pane of PQ editor, right-click on the queries editor and choose New Query > Other Query > Blank Query.
+* To remove empty columns, right-click on the **Queries Pane** of the editor and choose **New Query > Other Query > Blank Query**.
     
-    ![New Blank Query](/img/extracting_trial_balance_from_ledger/blank_query.png)
+    ![New Blank Query](/img/extracting-trial-balance-from-ledger-p1/blank_query.png)
+    <br/>
+    <br/>
 
-* Copy the code above to this query using the Advanced Editor in the Home Tab
+* Copy the code above to this query using the **Advanced Editor** in the **Home** Tab
 
-    ![Copy to Editor](/img/extracting_trial_balance_from_ledger/copy_editor.png)
+    ![Copy to Editor](/img/extracting-trial-balance-from-ledger-p1/copy_editor.png)
+    <br/>
+    <br/>
 
-* Rename this query to fnRemoveEmptyColumns. Take note that this query is denoted by the fx symbol
+* Rename this query to **fnRemoveEmptyColumns**. The **fn** prefix is just my convention but this makes it clear that we are using a custom function when we put this in our Power Query code.
     
-    ![fx](/img/extracting_trial_balance_from_ledger/fx_symbol.png)
-
-  as this is a function.
+    Take note also that the **fx** symbol at the left side of the query in the Query Pane denotes that this query is a function.
     
-* Go back to the original query. In the formula bar, click on the `fx` symbol
+    ![fx](/img/extracting-trial-balance-from-ledger-p1/fx_symbol.png)
 
-    ![fx Button](/img/extracting_trial_balance_from_ledger/fx_button.png)
+* Go back to the original query. In the formula bar, click on the **fx** symbol to invoke a function.
 
-  to invoke a function. 
+    ![fx Button](/img/extracting-trial-balance-from-ledger-p1/fx_button.png)
 
-* Type in `fnRemoveEmptyColumns(#"Removed Top Rows")` and Enter
+    The formula will now be highlighted. 
+    <br/>
+    <br/>
 
-    ![Invoke Function](/img/extracting_trial_balance_from_ledger/invoke_function.PNG)
+* Type in `fnRemoveEmptyColumns(#"Removed Top Rows")` and press **Enter**
 
-  Empty columns are now removed.
+    ![Invoke Function](/img/extracting-trial-balance-from-ledger-p1/invoke_function.PNG)
+    <br/>
+    <br/>
+    Empty columns are now removed.
+    <br/>
+    <br/>
 
 * Close the PQ editor. When prompted to Load results, choose **Only Create Connection**
+<br/>
 
-#### Conclusion
-That's it for now. In the next tutorial, we're going to remove section headers and further remove blank cells until we're down to our general ledger table. Click on this link to view [Part 2](ledger_to_trial_balance_part_2.html) of this tutorial.
+### Conclusion
+That's it for now. In the next tutorial, we're going to remove section headers and further remove blank cells until we're down to our general ledger table. Click on this link to view **[Part 2](../extracting-trial-balance-from-ledger-p2/)** of this tutorial.
 
 **Stay Querious. Happy coding!**

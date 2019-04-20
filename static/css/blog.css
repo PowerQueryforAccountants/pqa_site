@@ -92,13 +92,13 @@ span.tag {
 }
 
 /*links within the article*/
-.content > p > a, .content > ul > li > a {
+.content > p > strong > a, .content > p > a, .content > ul > li > a {
 	color: #54BCBF;
 	/*color: #6CE4E5;*/
 	/*color: #387E7F;*/
 }
 
-.content > p > a:hover, .content > ul > li > a:hover{
+.content > p > strong > a:hover, .content > p > a:hover, .content > ul > li > a:hover{
 	/*color: #54BCBF;*/
 	color: #1C3F40;
 }
