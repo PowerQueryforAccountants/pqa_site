@@ -9,7 +9,7 @@ tags: [
 ]
 archives: ["2019"]
 prev: /post/get-ending-inventory-under-fifo-p2/
-next: 
+next: /post/detecting-unrecorded-sales/
 ---
 ## Getting Ending Inventory Under FIFO - Part 3
 <br>

@@ -30,19 +30,21 @@ Detecting Unrecorded Sales
 2019-03-02
 
 2019-03-09
-Cleaning Contacts List for Import to Xero
-
-2019-03-16
-
-2019-03-23
 Summarizing Time Logs for Payroll
 
+2019-03-16
+Cleaning Contacts List for Import to Xero - Part 1
+
+2019-03-23
+Cleaning Contacts List for Import to Xero - Part 2
+
 2019-03-30
+Cleaning Contacts List for Import to Xero - Part 3
 
 2019-04-06
-Automating Transaction Import from Sales Journal
 
 2019-04-13
+Automating Transaction Import from Sales Journal
 
 2019-04-20
 Automating Sales Analysis

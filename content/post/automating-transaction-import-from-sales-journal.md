@@ -8,8 +8,9 @@ tags: [
     "fifo.costing",
     "custom.functions"
 ]
----
 archives: ["2019"]
+---
+
 ### Automating Transaction Import from Sales Journal
 <br>
 
