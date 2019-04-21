@@ -24,24 +24,22 @@ Getting Ending Inventory Under FIFO - Part 2
 Getting Ending Inventory Under FIFO - Part 3
 
 2019-02-23
-Detecting Unrecorded Sales
 
 
 2019-03-02
 
 2019-03-09
-Summarizing Time Logs for Payroll
+Detecting Unrecorded Sales
 
 2019-03-16
-Cleaning Contacts List for Import to Xero - Part 1
 
 2019-03-23
-Cleaning Contacts List for Import to Xero - Part 2
 
 2019-03-30
-Cleaning Contacts List for Import to Xero - Part 3
+Summarizing Time Logs for Payroll
 
 2019-04-06
+Cleaning Contacts List for Import to Xero
 
 2019-04-13
 Automating Transaction Import from Sales Journal
