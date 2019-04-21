@@ -21,9 +21,9 @@ Getting Ending Inventory Under FIFO - Part 1
 Getting Ending Inventory Under FIFO - Part 2
 
 2019-02-16
-Getting Ending Inventory Under FIFO - Part 3
 
 2019-02-23
+Getting Ending Inventory Under FIFO - Part 3
 
 
 2019-03-02
@@ -34,9 +34,9 @@ Detecting Unrecorded Sales
 2019-03-16
 
 2019-03-23
+Summarizing Time Logs for Payroll
 
 2019-03-30
-Summarizing Time Logs for Payroll
 
 2019-04-06
 Cleaning Contacts List for Import to Xero
