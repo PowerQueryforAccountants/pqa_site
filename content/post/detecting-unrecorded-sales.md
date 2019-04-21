@@ -2,7 +2,6 @@
 title: "Detecting Unrecorded Sales"
 linktitle: "Detecting Unrecorded Sales"
 date: 2019-02-23
-draft: true
 tags: [
     "unrecorded.sales",
     "fictitious.sales",

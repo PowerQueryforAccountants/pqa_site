@@ -15,12 +15,13 @@ Extracting Trial Balance From Ledger P3
 2019-01-26
 
 2019-02-02
-Getting Ending Inventory Under FIFO
+Getting Ending Inventory Under FIFO - Part 1
 
 2019-02-09
-Getting FIFO Inventory Cost
+Getting Ending Inventory Under FIFO - Part 2
 
 2019-02-16
+Getting Ending Inventory Under FIFO - Part 3
 
 2019-02-23
 Detecting Unrecorded Sales
