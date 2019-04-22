@@ -14,4 +14,6 @@ archives: ["2019"]
 ### Automating Transaction Import from Sales Journal
 <br>
 
-TODO
+It is common that sales are recorded in a tracking sheet instead of directly adding them in an accounting software. Perhaps, a business has branches that maintains its own sales journal to be collected by the company's accountant at the end of the day or perhaps, the recording of sales is handled by a clerk and that as part of monthly processes these are imported to an accounting system.
+
+In any case, Power Query can help on this one. 
