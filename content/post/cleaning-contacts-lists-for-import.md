@@ -11,7 +11,7 @@ tags: [
 
 archives: ["2019"]
 prev: /post/summarizing-time-logs-for-payroll/
-next: 
+next: /post/automating-transaction-import-from-sales-journal/
 ---
 
 ### Cleaning Contacts List for Import to Xero
