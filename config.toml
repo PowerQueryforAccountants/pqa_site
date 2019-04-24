@@ -7,6 +7,9 @@ canonifyurls = true
 paginate = 3
 theme = "jeffprod"
 googleAnalytics = "UA-138942297-1"
+#disqusShortname = "https-powerqueryforaccountants-com"
+
+
 #uglyurls = false
 #[permalinks]
 #    tag = "tags/:tag/"
