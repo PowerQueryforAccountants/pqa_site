@@ -9,7 +9,7 @@ tags: [
 ]
 archives: ["2019"]
 prev: /post/cleaning-contacts-lists-for-import/
-next: /post/gap-detection-in-power-query/
+next: /post/audit-procedures-gap-detection-with-power-query/
 ---
 
 ## Automating Transaction Import from Sales Journal

@@ -49,14 +49,14 @@ Automating Transaction Import from Sales Journal
 2019-04-27
 
 2019-05-04
-Gap Detection with Power Query
+Audit Procedures: Gap Detection with Power Query
 
 2019-05-11
 
 2019-05-18
-Duplicate Detection with Power Query
+Audit Procedures: Duplicate Detection with Power Query
 
 2019-05-25
 
 2019-06-01
-Fraud Detection with Power Query
+Audit Procedures: Fraud Detection with Power Query
