@@ -6,7 +6,7 @@ copyright = "© 2019 Power Query for Accountants"
 canonifyurls = true
 paginate = 3
 theme = "jeffprod"
-#googleAnalytics = "UA-138942297-1"
+googleAnalytics = "UA-138942297-1"
 #uglyurls = false
 #[permalinks]
 #    tag = "tags/:tag/"
