@@ -1,6 +1,6 @@
 ---
-title: "Audit Procedures: Gap Detection with Power Query"
-linktitle: "Audit Procedures: Gap Detection with Power Query"
+title: "Audit Procedures in Power Query: Gap Detection"
+linktitle: "Audit Procedures in Power Query: Gap Detection"
 date: 2019-05-04
 draft: true
 tags: [
@@ -10,7 +10,7 @@ tags: [
 ]
 archives: ["2019"]
 prev: /post/automating-transaction-import-from-sales-journal/
-next: /post/audit-procedures-duplicate-detection-with-power-query/
+next: /post/audit-procedures-in-power-query-duplicate-detection/
 ---
 
 
@@ -28,7 +28,7 @@ Normally, we do this kind of test using specialized audit softwares which may co
 ### The Process
 Determining gaps within a list of invoices basically involve comparing two sets of data, the client-given invoices and the population of all invoices. This can be visualized with the help of the following
 
-![Venn Diagram](../../static/img/audit-procedures-gap-detection-with-power-query/gap_detection.png)
+![Venn Diagram](../../static/img/audit-procedures-in-power-query-gap-detection/gap_detection.png)
 
 Client-given invoices (green circle) is a subset of the population of all the invoices (red circle). Anything that's outside the green circle but within the red circle can be thought of as the missing invoices or the "gap".
 
@@ -45,17 +45,17 @@ To follow along, you could download the exercise files from here(TODO).
 
 	The data should now look like this
 	
-	![Client Invoices](../../static/img/audit-procedures-gap-detection-with-power-query/client_invoices.png)
+	![Client Invoices](../../static/img/audit-procedures-in-power-query-gap-detection/client_invoices.png)
 
 3. Duplicate this query. From this query, we're going to get the first and last invoice numbers and recreate the complete list of invoices. This then will be the population of all invoices.
 	
 4. The invoice number is formatted as "INV" followed by the three-digit invoice numbers. To get the first and last invoice numbers, we have to get the numeric part of the Invoice Numbers. Select the Invoice Numbers column and go to Add Column tab > Extract > Last Characters and put "3".
 
-	![Insert](../../static/img/audit-procedures-gap-detection-with-power-query/insert.png)
+	![Insert](../../static/img/audit-procedures-in-power-query-gap-detection/insert.png)
 
 	Convert the resulting column to numbers. The data should now look like this
 
-	![Inserted](../../static/img/audit-procedures-gap-detection-with-power-query/inserted.png)
+	![Inserted](../../static/img/audit-procedures-in-power-query-gap-detection/inserted.png)
 
 
 5. From this new column, we're going to extract the minimum and maximum numbers. Go to Home tab > Advanced Editor and add the following code
@@ -68,17 +68,17 @@ To follow along, you could download the exercise files from here(TODO).
 
 	The data should now look like this
 
-	![Custom](../../static/img/audit-procedures-gap-detection-with-power-query/custom.png)
+	![Custom](../../static/img/audit-procedures-in-power-query-gap-detection/custom.png)
 	
 	
 	There's now a new Transform tab that appears at the top. This is a contextual tab as the resulting data from the step above is a list. 
 
-	![New Transform](../../static/img/audit-procedures-gap-detection-with-power-query/new_transform.png)
+	![New Transform](../../static/img/audit-procedures-in-power-query-gap-detection/new_transform.png)
 
 
 	Go to this tab and click on the To Table. Accept the defaults in the dialog box
 
-	![Accept Defaults](../../static/img/audit-procedures-gap-detection-with-power-query/accept_defaults.png)
+	![Accept Defaults](../../static/img/audit-procedures-in-power-query-gap-detection/accept_defaults.png)
 	
 
 6. Now we have to create a new column to combine "INV" with these numbers. But before that, we have to convert our to column to text. Concatenation only works for text data. 
@@ -89,37 +89,37 @@ To follow along, you could download the exercise files from here(TODO).
 
 	Go to Transform > Format > Add Prefix and add 2 zeroes
 
-	![Prefix](../../static/img/audit-procedures-gap-detection-with-power-query/prefix.png)
+	![Prefix](../../static/img/audit-procedures-in-power-query-gap-detection/prefix.png)
 
 	Now go to Transform > Extract > Last Characters and put 3
 	
-	![Extract](../../static/img/audit-procedures-gap-detection-with-power-query/extract.png)
+	![Extract](../../static/img/audit-procedures-in-power-query-gap-detection/extract.png)
 
 	The data should like this after convertion
 
-	![Prefixed](../../static/img/audit-procedures-gap-detection-with-power-query/prefixed.png)
+	![Prefixed](../../static/img/audit-procedures-in-power-query-gap-detection/prefixed.png)
 
 
 7. Create a new column to combine the "INV" to this column. Go to Add Column > Custom Column
 
-	![New Column](../../static/img/audit-procedures-gap-detection-with-power-query/new_col.png)
+	![New Column](../../static/img/audit-procedures-in-power-query-gap-detection/new_col.png)
 
 	Remove the original column. This now our list of all the invoices (population)
 
-	![Population](../../static/img/audit-procedures-gap-detection-with-power-query/population.png)
+	![Population](../../static/img/audit-procedures-in-power-query-gap-detection/population.png)
 
 ### Extracting the Missing Invoice Numbers
 Now to extract the missing invoice numbers, we're going to do a left anti join of the population and the client-invoices.
 
 Create a new merge query. Choose the population query first and the client-invoices query second. Choose Left-Anti join
 	
-![Left-Anti](../../static/img/audit-procedures-gap-detection-with-power-query/left-anti.png)
+![Left-Anti](../../static/img/audit-procedures-in-power-query-gap-detection/left-anti.png)
 
 These are now your missing invoice numbers. If you expand the table column, this should contain nulls. The reason is that the resulting invoices numbers from the merge are the ones missing from the client-invoices hence they are all nulls. You could try this on your own!
 
 Remove unnecessary columns. The final data should like this
 
-![Final](../../static/img/audit-procedures-gap-detection-with-power-query/final.png)
+![Final](../../static/img/audit-procedures-in-power-query-gap-detection/final.png)
 
 ### Conclusion
 In this tutorial, you have learned how to use Power Query to detect missing invoice numbers. 
