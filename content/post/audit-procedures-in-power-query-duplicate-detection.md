@@ -18,7 +18,7 @@ next: /post/audit-procedures-in-power-query-fraud-detection/
 
 This is the **Part 2** of the series on the **Audit Procedures in Power Query**.
 
-If you missed the **Part 1**, you can read it **[here](../audit-procedures-in-power-query-gap-detection/)**
+If you missed the **Part 1**, you can read it **[here](/post/audit-procedures-in-power-query-gap-detection/)**
 
 Duplicate Detection is a technique wherein duplicates are detected from a list of numbers. For example, determining the duplicate invoice numbers within a list of invoice numbers.
 
