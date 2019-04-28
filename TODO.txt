@@ -60,3 +60,10 @@ Audit Procedures: Duplicate Detection with Power Query
 
 2019-06-01
 Audit Procedures: Fraud Detection with Power Query
+
+2019-06-15
+2019-06-29
+2019-07-13
+2019-07-27
+
+
