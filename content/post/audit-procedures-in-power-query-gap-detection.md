@@ -1,8 +1,7 @@
 ---
 title: "Audit Procedures in Power Query: Gap Detection"
 linktitle: "Audit Procedures in Power Query: Gap Detection"
-date: 2019-04-27
-draft: true
+date: 2019-05-04
 tags: [
     "groupby",
     "index.column",
