@@ -3,9 +3,10 @@ title: "Extracting a Trial Balance from a Ledger - Part 1"
 linktitle: "Extracting a Trial Balance from a Ledger - Part 1"
 date: 2019-01-05
 tags: [
-    "groupby",
+    "data.transformation",
     "ledger",
-    "trial.balance"
+    "trial.balance",
+    "automation",
 ]
 
 archives: ["2019"]

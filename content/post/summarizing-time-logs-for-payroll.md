@@ -3,9 +3,9 @@ title: "Summarizing Time Logs for Payroll"
 linktitle: "Summarizing Time Logs for Payroll"
 date: 2019-03-23
 tags: [
-    "groupby",
-    "fifo.costing",
-    "time.sheets"
+    "time.sheets",
+    "importing.data",
+    "automation"
 ]
 archives: ["2019"]
 prev: /post/detecting-unrecorded-sales/
@@ -17,8 +17,9 @@ next: /post/cleaning-contacts-lists-for-import/
 
 Biometrics systems are now ubiquitous in offices. These devices work by allowing entry and exit to office promises usually with the use of fingerprint scan. These scans happen a lot during the day as employees arrive at the office, take a lunch or a restroom break, and upon leaving the office.
 
-Now the challenge is to summarize these time logs in order to get the hours worked by each employee at the end of each payroll period.
-We could do these easily with Power Query.
+Now the challenge is to summarize these time logs in order to get the hours worked by each employee at the end of each payroll period. Afterwards, we could import these to payroll softwares such as **QuickBooks Payroll** or **Gusto**.
+
+Let's now explore how we could do summarize time logs quickly in Power Query.
 
 ### The Process
 

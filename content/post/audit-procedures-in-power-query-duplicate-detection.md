@@ -4,9 +4,9 @@ linktitle: "Audit Procedures in Power Query: Duplicate Detection"
 date: 2019-04-28
 draft: true
 tags: [
-    "groupby",
-    "index.column",
-    "List.First"
+    "duplicate.detection",
+    "audit",
+    "automation"
 ]
 archives: ["2019"]
 prev: /post/audit-procedures-in-power-query-gap-detection/

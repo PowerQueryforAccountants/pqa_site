@@ -4,9 +4,10 @@ linktitle: "Audit Procedures in Power Query: Fraud Detection"
 date: 2019-04-28
 draft: true
 tags: [
-    "groupby",
-    "index.column",
-    "List.First"
+    "fraud.detection",
+    "benford's.law",
+    "audit",
+    "automation"
 ]
 archives: ["2019"]
 prev: /post/audit-procedures-in-power-query-fraud-detection/

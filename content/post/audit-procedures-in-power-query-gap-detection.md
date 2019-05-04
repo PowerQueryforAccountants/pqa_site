@@ -3,11 +3,12 @@ title: "Audit Procedures in Power Query: Gap Detection"
 linktitle: "Audit Procedures in Power Query: Gap Detection"
 date: 2019-05-04
 tags: [
-    "gap detection",
-    "audit"
+    "gap.detection",
+    "audit",
+    "automation"
 ]
 archives: ["2019"]
-prev: /post/automating-transaction-import-from-sales-journal/
+prev: /post/automating-transaction-import-to-quickbooks-online-from-sales-journal/
 next: /post/audit-procedures-in-power-query-duplicate-detection/
 ---
 

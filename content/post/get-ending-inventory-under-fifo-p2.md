@@ -3,9 +3,9 @@ title: "Getting Ending Inventory Under FIFO - Part 2"
 linktitle: "Getting Ending Inventory Under FIFO - Part 2"
 date: 2019-02-09
 tags: [
-    "groupby",
     "fifo.costing",
-    "custom.functions"
+    "custom.functions",
+    "automation",
 ]
 archives: ["2019"]
 prev: /post/get-ending-inventory-under-fifo-p1/
