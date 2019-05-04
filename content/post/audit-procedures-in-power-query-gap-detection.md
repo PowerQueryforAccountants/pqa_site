@@ -3,9 +3,8 @@ title: "Audit Procedures in Power Query: Gap Detection"
 linktitle: "Audit Procedures in Power Query: Gap Detection"
 date: 2019-05-04
 tags: [
-    "groupby",
-    "index.column",
-    "List.First"
+    "gap detection",
+    "audit"
 ]
 archives: ["2019"]
 prev: /post/automating-transaction-import-from-sales-journal/
