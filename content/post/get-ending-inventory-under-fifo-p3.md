@@ -46,7 +46,7 @@ With that said, let's implement this in Power Query.
 
 1. Create a blank query and paste the following code. Name the query as **fnPreviousRow**.
 
-    We're going to use this query to refer to previous row of transaction. If you want to learn more about this function, you can check out this great blog post **[here](https://www.thebiccountant.com/2018/07/12/fast-and-easy-way-to-reference-previous-or-next-rows-in-power-query-or-power-bi/)**.
+    We're going to use this query to refer to previous row of transaction. If you want to learn more about this function, you can check out this great blog post [here](https://www.thebiccountant.com/2018/07/12/fast-and-easy-way-to-reference-previous-or-next-rows-in-power-query-or-power-bi/).
 
     ```
     let func =   
