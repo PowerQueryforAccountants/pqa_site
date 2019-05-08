@@ -20,7 +20,7 @@ This is the **Part 2** of the series on the **Audit Procedures in Power Query**.
 
 If you missed the **Part 1**, you can read it **[here](/post/audit-procedures-in-power-query-gap-detection/)**
 
-Duplicate Detection is a technique wherein duplicates are detected from a list of numbers. For example, determining the duplicate invoice numbers within a list of invoice numbers.
+**Duplicate Detection** is a technique wherein duplicates are detected from a list of numbers. For example, determining the duplicate invoice numbers within a list of invoice numbers.
 
 Having duplicates in the books is problematic for a lot of reasons. For example, if there are duplicates in the Invoice Numbers, this results to higher sales, higher taxes and therefore higher cash operating requirements. It may also indicate fraud as some employees may artificially beefing up the sales to increase commissions and bonuses.
 
