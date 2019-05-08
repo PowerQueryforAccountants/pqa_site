@@ -92,7 +92,7 @@ span.tag {
 }
 
 /*links within the article*/
-.content > p > strong > a, .content > p > a, .content > ul > li > a {
+.content > p > strong > a, .content > p > a, .content > ul > li > a, .content > ol > li > p > a {
 	color: #54BCBF;
 	/*color: #6CE4E5;*/
 	/*color: #387E7F;*/
