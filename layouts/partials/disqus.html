@@ -1,20 +1,4 @@
 <!-- <div id="disqus_thread"></div>
-<script>
-(function() {
-var d = document, s = d.createElement('script');
-// s.src = 'https://larnsce.disqus.com/embed.js';
-
-var disqus_shortname = '{{ .Site.DisqusShortname }}';
-// s.src = '//' + "https-powerqueryforaccountants-com" + '.disqus.com/embed.js';
-s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
-
-<!-- <div id="disqus_thread"></div>
 <script type="text/javascript">
 
 (function() {
@@ -34,7 +18,12 @@ s.setAttribute('data-timestamp', +new Date());
 
 <div id="disqus_thread"></div>
 <script>
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
 var d = document, s = d.createElement('script');
 s.src = 'https://powerqueryforaccountants.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
