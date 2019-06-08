@@ -1,8 +1,7 @@
 ---
 title: "Audit Procedures in Power Query: Fraud Detection"
 linktitle: "Audit Procedures in Power Query: Fraud Detection"
-date: 2019-04-28
-draft: true
+date: 2019-06-08
 tags: [
     "fraud.detection",
     "benford's.law",
