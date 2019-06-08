@@ -73,3 +73,10 @@ Searching a List of Strings within another String
 2019-07-27
 Remove Duplicates from a List in a Single Cell
 
+
+
+Check out my latest article on using Power Query in implementing Benford's Law to detect fraud.
+
+Stay Querious. Happy coding! 
+
+#powerquery #accounting #powerqueryforaccountants
