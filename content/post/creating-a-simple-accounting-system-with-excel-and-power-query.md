@@ -1,6 +1,6 @@
 ---
-title: "Creating a Simple Accounting System with Excel & Power Query"
-linktitle: "Creating a Simple Accounting System with Excel & Power Query"
+title: "Creating a Simple Accounting System with Excel and Power Query"
+linktitle: "Creating a Simple Accounting System with Excel and Power Query"
 draft: true
 date: 2019-08-03
 tags: [
