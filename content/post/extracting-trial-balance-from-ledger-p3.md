@@ -4,7 +4,7 @@ linktitle: "Extracting a Trial Balance from a Ledger - Part 3"
 date: 2019-01-19
 tags: [
     "data.transformation",
-    "ledger",
+    "general.ledger",
     "trial.balance",
     "automation",
 ]
