@@ -16,7 +16,7 @@ prev: /post/audit-procedures-in-power-query-fraud-detection/
 next: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p2/
 ---
 
-## Creating a Simple Accounting System with Excel & Power Query
+## Creating a Simple Accounting System with Excel & Power Query - Part 1
 <br>
 
 In this series, we're going to explore the use of Power Query in creating a simple accounting system.
