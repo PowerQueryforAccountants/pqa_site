@@ -1,8 +1,8 @@
 ---
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 3"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 3"
-date: 2019-09-25
-draft: true
+date: 2019-10-06
+<!-- draft: true -->
 tags: [
     "accounting.system",
     "data.validation",
@@ -14,7 +14,7 @@ tags: [
 ]
 archives: ["2019"]
 prev: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p2/
-next: 
+next: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p3/
 ---
 
 ## Creating a Simple Accounting System with Excel & Power Query - Part 3
@@ -76,6 +76,7 @@ To get the Net Income/Loss, we have to create another query for this. Take note 
     * Rearrange columns: Same order with the Balance Sheet query
 
     It should now look like this
+
     ![Net Income Loss Final](/img/creating-a-simple-accounting-system-with-excel-and-power-query/net_inc_loss_final.png)
     
     Rename this query as **7_P&L_NI**. 

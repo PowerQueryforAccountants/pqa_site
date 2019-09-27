@@ -1,7 +1,3 @@
-color the navigation pages
-fix tag linking and archive linking - do the pushing in mac
-
-
 Calendar:
 2019-01-5
 Extracting Trial Balance From Ledger P1
@@ -61,16 +57,24 @@ Audit Procedures: Duplicate Detection with Power Query
 2019-06-01
 Audit Procedures: Fraud Detection with Power Query
 
-2019-06-15
+2019-09-22
+Creating a Simple Accounting System with Excel and Power Query - Part 1
+
+2019-09-29
+Creating a Simple Accounting System with Excel and Power Query - Part 2
+
+2019-10-06
+Creating a Simple Accounting System with Excel and Power Query - Part 3
+
+2019-10-13
+Creating a Simple Accounting System with Excel and Power Query - Part 4
+
+
+
+
 Consolidating Files in a Folder
-
-2019-06-29
 Consolidating Files using a Loop
-
-2019-07-13
 Searching a List of Strings within another String
-
-2019-07-27
 Remove Duplicates from a List in a Single Cell
 
 
@@ -80,3 +84,8 @@ Check out my latest article on using Power Query in implementing Benford's Law t
 Stay Querious. Happy coding! 
 
 #powerquery #accounting #powerqueryforaccountants
+
+
+Coding standards
+**bold** - Headings, commands, and query names. Terms that are enumerated for the first time
+`code` - code blocks

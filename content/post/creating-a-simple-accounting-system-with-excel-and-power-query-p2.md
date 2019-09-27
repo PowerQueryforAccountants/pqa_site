@@ -1,8 +1,8 @@
 ---
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 2"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 2"
-date: 2019-09-24
-draft: true
+date: 2019-09-27
+<!-- draft: true -->
 tags: [
     "accounting.system",
     "data.validation",
@@ -53,9 +53,9 @@ First, we have to recreate our **General Ledger**. Why do we have to do it? Basi
     <br>
     <br>
 
-    Named the query as **2_AccountsT**
+    Named the query as **2_AccountsT**. Close and load it as connection only.
 
-3. Now, we're ready to merge them. In the PowerQuery editor, right-click on the **Queries Pane**,  **New Query > Combine > Merge Queries as New**.
+3. Now, we're ready to merge them the **1_GL** and **2_AccountsT**. In the PowerQuery editor, right-click on the **Queries Pane**,  **New Query > Combine > Merge Queries as New**.
 
     ![Merge Queries](/img/creating-a-simple-accounting-system-with-excel-and-power-query/merge_queries.png)
     <br>
@@ -67,11 +67,11 @@ First, we have to recreate our **General Ledger**. Why do we have to do it? Basi
     <br>
     <br>
 
-4. Expand the resulting column and include the Account # and Account Type.
+4. Expand the resulting column and include only Account # and Account Type.
 
     ![Expand Column](/img/creating-a-simple-accounting-system-with-excel-and-power-query/expand_col.png)
 
-    Named this query as **3_GL complete**. I choose to not prefix the columns with the original column name cause there are NO conflicts with the other column names. After doing that, we now have the complete GL that we could use later on in the reports.
+    Named this query as **3_GL complete**. I choose to not prefix the columns with the original column name cause there are NO conflicts with the other column names. After doing that, we now have the complete GL that we could use later on in the reports. Close and load it as connection only.
 
 ### Creating the Trial Balance
 
@@ -133,7 +133,7 @@ The **Profit & Loss Statement** shows the financial performance of a company as 
     <br>
     <br>
 
-3. Reverse the signs of the Balance column for presentation. We reverse the signs to show the Revenues as positive and Expenses as negative. You could do this by multiplying Balance by -1 in a new column.
+3. Reverse the signs of the Balance column for presentation. We reverse the signs to show the Revenues as positive and Expenses as negative. You could do this by *multiplying Balance by -1* in a new column.
     <br>
 
 4. Remove Account Type, Debit, Credit and Balance columns. Our query now looks like this.
