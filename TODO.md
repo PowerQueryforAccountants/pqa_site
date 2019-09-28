@@ -79,7 +79,7 @@ Remove Duplicates from a List in a Single Cell
 
 
 
-Check out my latest article on using Power Query in implementing Benford's Law to detect fraud.
+Check out the Part 2 of the series on creating an accounting system in Excel and PowerQuery.
 
 Stay Querious. Happy coding! 
 

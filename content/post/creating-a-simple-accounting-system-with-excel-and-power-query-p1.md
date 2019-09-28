@@ -2,6 +2,7 @@
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 1"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 1"
 date: 2019-09-22
+<!-- draft: true -->
 tags: [
     "accounting.system",
     "data.validation",
