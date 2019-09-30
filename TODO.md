@@ -81,7 +81,9 @@ Remove Duplicates from a List in a Single Cell
 
 Check out the Part 2 of the series on creating an accounting system in Excel and PowerQuery.
 
-Stay Querious. Happy coding! 
+Stay Querious. Happy coding!
+
+https://powerqueryforaccountants.com/post/creating-a-simple-accounting-system-with-excel-and-power-query-p2/
 
 #powerquery #accounting #powerqueryforaccountants
 
