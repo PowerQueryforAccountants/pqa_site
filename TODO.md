@@ -69,7 +69,14 @@ Creating a Simple Accounting System with Excel and Power Query - Part 3
 2019-10-13
 Creating a Simple Accounting System with Excel and Power Query - Part 4
 
+2019-10-20
+Estimating Allowance for Bad Debts
 
+2019-10-27
+Sales Trend Analysis
+
+2019-11-03
+Moving Average Forecasting Sales
 
 
 Consolidating Files in a Folder
