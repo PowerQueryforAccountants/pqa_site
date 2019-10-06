@@ -70,12 +70,15 @@ Creating a Simple Accounting System with Excel and Power Query - Part 3
 Creating a Simple Accounting System with Excel and Power Query - Part 4
 
 2019-10-20
-Estimating Allowance for Bad Debts
+Power Query Syntax Highlighting
 
 2019-10-27
-Sales Trend Analysis
+Estimating Allowance for Bad Debts
 
 2019-11-03
+Sales Trend Analysis
+
+2019-11-10
 Moving Average Forecasting Sales
 
 
