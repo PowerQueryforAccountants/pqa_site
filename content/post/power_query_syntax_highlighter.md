@@ -4,11 +4,12 @@ linktitle: "Power Query Syntax Highlighter in Sublime Text"
 date: 2019-10-05 01:00:00
 draft: true
 tags: [
-    "power query"
+    "power.query",
+    "sublime.text"
 ]
 archives: ["2019"]
-prev: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p2/
-next: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p3/
+prev: /post/creating-a-simple-accounting-system-with-excel-and-power-query-p3/
+next: /post/estimating_allowance_for_bad_debts/
 ---
 
 

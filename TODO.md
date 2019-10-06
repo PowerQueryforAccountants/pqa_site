@@ -88,12 +88,12 @@ Searching a List of Strings within another String
 Remove Duplicates from a List in a Single Cell
 
 
-
-Check out the Part 2 of the series on creating an accounting system in Excel and PowerQuery.
+Hello World!
+Check out the Part 3 of the series on creating an accounting system in Excel and PowerQuery.
 
 Stay Querious. Happy coding!
 
-https://powerqueryforaccountants.com/post/creating-a-simple-accounting-system-with-excel-and-power-query-p2/
+https://powerqueryforaccountants.com/post/creating-a-simple-accounting-system-with-excel-and-power-query-p3/
 
 #powerquery #accounting #powerqueryforaccountants
 
