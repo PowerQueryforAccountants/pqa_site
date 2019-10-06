@@ -1,7 +1,7 @@
 ---
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 3"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 3"
-date: 2019-10-06
+date: 2019-10-05
 <!-- draft: true -->
 tags: [
     "accounting.system",
@@ -32,7 +32,9 @@ If you missed previous tutorials, you could view them on the following links
 In the previous post, we have created the Trial Balance and Profit & Loss statements for our accounting system. In this post, we're going to complete basic reports by doing the Balance Sheet.
 
 ### The Balance Sheet Report
-The **Balance Sheet** shows all the resources of a business (the **Assets**) and how these were financed, either thru debt (the **Liabilities**) or thru owner contributions (the **Equity**). Together, the equation **Assets = Liabilities + Equity** should hold true when creating the Balance Sheet. This is the **Fundamental Accounting Equation** and it has been the guiding equation for accountants for years now (as as long as accounting exists!). If you've done the TB in the previous section, this should be easy.
+The **Balance Sheet** shows all the resources of a business (the **Assets**) and how these were financed, either thru debt (the **Liabilities**) or thru owner contributions (the **Equity**).
+
+Together, the equation **Assets = Liabilities + Equity** should hold true when creating the Balance Sheet. This is the **Fundamental Accounting Equation** and it has been the guiding equation for accountants for years now (as as long as accounting exists!). If you've done the TB in the previous section, this should be easy.
 
 1. Create a blank query again and get the data from the **4_TB** query. 
 2. Filter the Account Type to include only the Assets, Liabilities, and Equity account types.
@@ -40,7 +42,8 @@ The **Balance Sheet** shows all the resources of a business (the **Assets**) and
     ![Final BS](/img/creating-a-simple-accounting-system-with-excel-and-power-query/filter_bs.png)
 
 3. Remove the Debit and Credit columns. At this point, our Balance Sheet should look like this.
-    preliminary_bs.png
+    
+    ![Preliminary BS](/img/creating-a-simple-accounting-system-with-excel-and-power-query/preliminary_bs.png)
 
     The Balance column should total to zero as a result of the Fundamental Accounting Equation. However, this is not the case. The total of Liabilities and Equity is 23.26 more than the assets (223.26 vs 200 - in absolute amounts.).
 
@@ -56,10 +59,14 @@ To get the Net Income/Loss, we have to create another query for this. Take note 
 3. Remove the Debit and Credit columns. The query should now look like this.
 
     ![Net Income Loss](/img/creating-a-simple-accounting-system-with-excel-and-power-query/net_inc_loss1.png)
+    <br>
+    <br>
 
 4. To combine the amounts, add a custom column with the string "Net Income/Loss"
     
     ![Custom Column Net Income Loss](/img/creating-a-simple-accounting-system-with-excel-and-power-query/custom_col_net_inc_loss.png)
+    <br>
+    <br>
 
 5. Now, apply the Group By function to this column as follows
     ![Group Net Income Loss](/img/creating-a-simple-accounting-system-with-excel-and-power-query/group_net_inc_loss.png)
@@ -67,8 +74,10 @@ To get the Net Income/Loss, we have to create another query for this. Take note 
     The query should now look like this.
     
     ![Net Income Loss](/img/creating-a-simple-accounting-system-with-excel-and-power-query/net_inc_loss2.png)
+    <br>
+    <br>
 
-    It is a Net Loss. It's sign (positive)is opposite from the P&L created above (negative) as that one is used for reporting purpose. The amount we compute here is will be used only to create our final Balance Sheet and not presented anywhere in the workbook.
+    It is a Net Loss. Its sign (positive) is opposite from the P&L created above (negative) as that one is used for reporting purpose. The amount we compute here is will be used only to create our final Balance Sheet and not presented separately in the workbook.
 
 6. Now, we have to append this to our preliminary Balance Sheet above. But before we do that, some housekeeping first. We have to change this query with same format as the Balance Sheet. That means:
     * Create Account # and Account Type columns with null values.
@@ -78,6 +87,8 @@ To get the Net Income/Loss, we have to create another query for this. Take note 
     It should now look like this
 
     ![Net Income Loss Final](/img/creating-a-simple-accounting-system-with-excel-and-power-query/net_inc_loss_final.png)
+    <br>
+    <br>
     
     Rename this query as **7_P&L_NI**. 
 
