@@ -26,7 +26,7 @@ Excel has always been the go-to tool for accountants. It's so simple and easy to
 
 Now, with the availability of Power Query, we could now extend Excel easily to create a simple accounting system.
 
-To follow along, you could download the exercise files from **[here](https://github.com/PowerQueryforAccountants/Creating-a-Simple-Accounting-System-with-Excel-and-Power-Query)**.
+To follow along, you could download the exercise files from **[here](https://github.com/PowerQueryforAccountants/Accounting-System-with-Excel-and-PQ)**.
 
 ### Planning the System
 Before we dive in and create our accounting system, let's think of the different parts and components of our system. For a simple accounting system, we basically need the following:
