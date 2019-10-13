@@ -4,7 +4,7 @@ baseurl = "https://powerqueryforaccountants.com/"
 title = "Power Query for Accountants"
 copyright = "© 2019 Power Query for Accountants"
 canonifyurls = true
-paginate = 3
+paginate = 4
 theme = "jeffprod"
 googleAnalytics = "UA-138942297-1"
 disqusShortname = "powerqueryforaccountants"
@@ -17,3 +17,4 @@ disqusShortname = "powerqueryforaccountants"
 [taxonomies]
   tag = "tags"
   archive = "archives"
+#  archive = "/:year/:month/"

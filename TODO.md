@@ -67,10 +67,10 @@ Creating a Simple Accounting System with Excel and Power Query - Part 2
 Creating a Simple Accounting System with Excel and Power Query - Part 3
 
 2019-10-13
-Creating a Simple Accounting System with Excel and Power Query - Part 4
+Power Query Syntax Highlighting
 
 2019-10-20
-Power Query Syntax Highlighting
+Creating a Simple Accounting System with Excel and Power Query - Part 4
 
 2019-10-27
 Estimating Allowance for Bad Debts
@@ -81,6 +81,8 @@ Sales Trend Analysis
 2019-11-10
 Moving Average Forecasting Sales
 
+2019-11-17
+Detecting Wrongly Posted Payroll Items
 
 Consolidating Files in a Folder
 Consolidating Files using a Loop
