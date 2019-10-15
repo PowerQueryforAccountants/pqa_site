@@ -82,7 +82,11 @@ Sales Trend Analysis
 Moving Average Forecasting Sales
 
 2019-11-17
-Detecting Wrongly Posted Payroll Items
+Detecting Wrongly Posted Payroll Items - using the Payroll Summarizer
+
+2019-11-24
+Cross Join to Repeat a Weekly Budget
+
 
 Consolidating Files in a Folder
 Consolidating Files using a Loop
