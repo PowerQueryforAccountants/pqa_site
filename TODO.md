@@ -94,6 +94,28 @@ Searching a List of Strings within another String
 Remove Duplicates from a List in a Single Cell
 
 
+Add to marketing - twitter
+More from PQ tips
+Disable auto detect data type
+View monospaced - to detect wrong length item
+Rename steps in a query
+Determining query dependencies
+Reference a query - right-click reference
+Duplicate a query - delete steps until end
+Cross join - add a custom column
+Copy and paste queries to new workbook
+Anti-join - two criteria
+Merge queries - digit to nondigit - merge queries as new
+Filtering - one way vs dynamic
+Sorting - edit the code or sort consecutively
+Pass parameter - one parameter at a time - using drill down
+Prevent table resizing - external data properties
+Transformation table - in the Fuzzy merge - transformation table should have text data type
+Filter files when importing from a folder - apply the filter to the Source step
+Two types of merges - be careful on the order of selection - also either thru (1) Add column tab or (2) Right-click merge
+Split column - by delimiter ", "
+
+
 Hello World!
 Check out the Part 3 of the series on creating an accounting system in Excel and PowerQuery.
 
