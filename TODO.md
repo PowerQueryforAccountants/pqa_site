@@ -117,11 +117,11 @@ Split column - by delimiter ", "
 
 
 Hello World!
-Check out the Part 3 of the series on creating an accounting system in Excel and PowerQuery.
+Check out the Part 4 and final installment of the series on creating an accounting system in Excel and PowerQuery.
 
 Stay Querious. Happy coding!
 
-https://powerqueryforaccountants.com/post/creating-a-simple-accounting-system-with-excel-and-power-query-p3/
+https://powerqueryforaccountants.com/post/creating-a-simple-accounting-system-with-excel-and-power-query-p4/
 
 #powerquery #accounting #powerqueryforaccountants
 
