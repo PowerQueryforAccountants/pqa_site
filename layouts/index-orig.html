@@ -2,6 +2,11 @@
 {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post").ByPublishDate.Reverse }}
 
 <div class="columns">
+<!--     <div class="column is-one-fifths">
+        {{ partial "widget-tags.html" . }}<br>
+        {{ partial "widget-recent.html" . }}<br>
+        {{ partial "widget-archives.html" . }}
+    </div> -->
     <div class="column is-9">
         <div class="tile is-child box">
             <div class="content">
@@ -23,9 +28,11 @@
         </div>
     </div>
     <div class="column is-3">
-        {{ partial "widget-tags.html" . }}<br>
+
+        {{ partial "widget-donate.html" . }}<br>
         {{ partial "widget-recent.html" . }}<br>
-        {{ partial "widget-archives.html" . }}
+        {{ partial "widget-archives.html" . }}<br>
+        <!-- {{ partial "widget-tags.html" . }}<br> -->
     </div>
 </div>
 <div class="columns">
