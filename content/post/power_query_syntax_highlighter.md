@@ -1,8 +1,8 @@
 ---
+draft: true
 title: "Power Query Syntax Highlighter in Sublime Text"
 linktitle: "Power Query Syntax Highlighter in Sublime Text"
 date: 2019-10-13
-<!-- draft: true -->
 tags: [
     "power.query",
     "sublime.text"

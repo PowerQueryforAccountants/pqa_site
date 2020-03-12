@@ -1,8 +1,8 @@
 ---
+draft: true
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 2"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 2"
 date: 2019-09-28
-<!-- draft: true -->
 tags: [
     "accounting.system",
     "data.validation",

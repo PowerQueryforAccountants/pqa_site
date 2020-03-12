@@ -1,7 +1,7 @@
 ---
+draft: true
 title: "Creating a Simple Accounting System with Excel and Power Query - Part 4"
 linktitle: "Creating a Simple Accounting System with Excel and Power Query - Part 4"
-<!-- date: 2019-09-27 -->
 date: 2019-10-19
 tags: [
     "accounting.system",

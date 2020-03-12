@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Extracting a Trial Balance from a Ledger - Part 1"
 linktitle: "Extracting a Trial Balance from a Ledger - Part 1"
 date: 2019-01-05

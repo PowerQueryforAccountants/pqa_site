@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Automating Transaction Import to QuickBooks Online from Sales Journal"
 linktitle: "Automating Transaction Import to QuickBooks Online from Sales Journal"
 date: 2019-04-20

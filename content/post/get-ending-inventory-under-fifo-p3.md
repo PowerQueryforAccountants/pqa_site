@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Getting Ending Inventory Under FIFO - Part 3"
 linktitle: "Getting Ending Inventory Under FIFO - Part 3"
 date: 2019-02-23

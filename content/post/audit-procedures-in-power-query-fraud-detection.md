@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Audit Procedures in Power Query: Fraud Detection"
 linktitle: "Audit Procedures in Power Query: Fraud Detection"
 date: 2019-06-08

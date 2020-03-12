@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Estimating Allowance for Bad Debts"
 linktitle: "Estimating Allowance for Bad Debts"
 date: 2019-10-05 01:00:00

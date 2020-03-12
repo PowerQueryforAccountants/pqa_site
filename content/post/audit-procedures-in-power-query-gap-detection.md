@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Audit Procedures in Power Query: Gap Detection"
 linktitle: "Audit Procedures in Power Query: Gap Detection"
 date: 2019-05-04
