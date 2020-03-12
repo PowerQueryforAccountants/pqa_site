@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Summarizing Time Logs for Payroll"
 linktitle: "Summarizing Time Logs for Payroll"
 date: 2019-03-23
